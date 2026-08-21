@@ -1,6 +1,6 @@
 {
   "name": "Next.js Developer Exercise",
   "snapshot": "snapshot-20260806-55ea569d-77a6-4b77-a6d2-1faa48e784b9",
-  "install": "npm ci",
+  "install": "npm ci && npx prisma generate",
   "start": "npm run dev -- --hostname 0.0.0.0 --port 3000"
 }

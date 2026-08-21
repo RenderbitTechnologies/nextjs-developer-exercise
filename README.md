@@ -17,6 +17,41 @@ This tutorial assumes you have a Node.js development environment set up on your 
 
 Fork this repository, and clone your fork locally. All submissions have to be made as a pull request against this repository.
 
+## Local Development Setup
+
+To run the project locally, follow these steps:
+
+### 1. Configure Environment Variables
+Create a `.env` file in the root directory and copy the contents from `.env.example`:
+```bash
+cp .env.example .env
+```
+Update the `DATABASE_URL` in `.env` with your PostgreSQL database credentials and DB name.
+Configure `AUTH_SECRET` by generating a new 32-byte secret:
+```bash
+openssl rand -hex 32
+```
+
+### 2. Install Dependencies & Generate Client
+Install the npm dependencies and compile the Prisma Client:
+```bash
+npm install
+npx prisma generate
+```
+
+### 3. Setup the Database Schema
+Apply the database migrations to provision the schema locally:
+```bash
+npx prisma migrate dev
+```
+
+### 4. Run the Dev Server
+Start the Next.js development server:
+```bash
+npm run dev
+```
+By default, the server runs on `http://localhost:3000`.
+
 ## Requirements
 
 You have to design a blogging application using Next.js.
