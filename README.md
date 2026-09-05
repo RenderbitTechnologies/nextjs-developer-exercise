@@ -2,6 +2,9 @@
 
 &copy; 2026 Renderbit Technologies Pvt. Ltd.
 
+>[!NOTE]
+> Read [BLOGLY.md](./BLOGLY.md) for technical documentation.
+
 ## Prerequisites
 
 You should be familiar with Node.js, React, Next.js, Git and GitHub.
